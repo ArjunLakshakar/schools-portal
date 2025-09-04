@@ -10,11 +10,26 @@ export default function ShowSchoolsClient({ initialSearch }) {
   useEffect(() => {
     fetch("/api/schools/get")
       .then((res) => res.json())
-      .then((data) => setSchools(data));
+      .then((data) => {
+        console.log("Fetched data:", data);
+
+        // Handle both possible cases: data is array OR { schools: [...] }
+        if (Array.isArray(data)) {
+          setSchools(data);
+        } else if (Array.isArray(data.schools)) {
+          setSchools(data.schools);
+        } else {
+          setSchools([]); // fallback if API response is unexpected
+        }
+      })
+      .catch((err) => {
+        console.error("Error fetching schools:", err);
+        setSchools([]);
+      });
   }, []);
 
   const filteredSchools = schools.filter((school) =>
-    school.name.toLowerCase().includes(search.toLowerCase())
+    school.name?.toLowerCase().includes(search.toLowerCase())
   );
 
   return (
@@ -47,7 +62,7 @@ export default function ShowSchoolsClient({ initialSearch }) {
       <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {filteredSchools.map((school) => (
           <div
-            key={school.id}
+            key={school.id || school._id} // handle MongoDB _id
             className="bg-white shadow-md rounded-2xl overflow-hidden hover:shadow-xl transition duration-300"
           >
             <img

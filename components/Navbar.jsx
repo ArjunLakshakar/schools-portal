@@ -18,14 +18,25 @@ export default function Navbar() {
           <Link href="/" className=" text-orange-500 font-semibold ">Home</Link>
           <Link href="/addSchools">Add Schools</Link>
           <Link href="/showSchools">Show Schools</Link>
-      
+
         </nav>
 
         {/* Socials */}
         <div className="hidden md:flex text-xl space-x-4 text-indigo-600">
-          <FaGithub className="cursor-pointer hover:text-indigo-800" />
-          <FaLinkedinIn className="cursor-pointer hover:text-indigo-800" />
+          <a
+            href="https://github.com/ArjunLakshakar/schools-portal"
+            target="_blank"
+          >
+            <FaGithub className="cursor-pointer hover:text-indigo-800" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/arjun-lakshakar-31686b309/"
+            target="_blank"
+          >
+            <FaLinkedinIn className="cursor-pointer hover:text-indigo-800" />
+          </a>
         </div>
+
 
         {/* Mobile Toggle */}
         <button
@@ -42,7 +53,7 @@ export default function Navbar() {
           <Link href="/">Home</Link>
           <Link href="/addSchools">Add Schools</Link>
           <Link href="/showSchools">Schools</Link>
-          
+
         </div>
       )}
     </header>
