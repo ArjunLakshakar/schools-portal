@@ -27,4 +27,9 @@ A mini project built with **Next.js 13+ (App Router)** and **MySQL** where users
 
 ---
 
+ ### Start
+npm install
+npm run dev
+
 GitHub - https://github.com/ArjunLakshakar/schools-portal
+vercel - https://schools-portal.vercel.app/
