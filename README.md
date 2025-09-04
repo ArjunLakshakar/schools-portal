@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🏫 EduFind - School Directory Portal
 
-## Getting Started
+A mini project built with **Next.js 13+ (App Router)** and **MySQL** where users can:
 
-First, run the development server:
+- ➕ Add schools with details and images  
+- 📋 View schools in a responsive grid layout  
+- 🔍 Search schools by name directly from the homepage  
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Features
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **Add School Form**  
+  - Built with `react-hook-form`  
+  - Input validation (email format, 10-digit phone, required fields)  
+  - File upload (stores images in `public/schoolImages/`)  
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Show Schools Page**  
+  - Displays schools in a modern, ecommerce-style grid  
+  - Includes search functionality  
+  - Responsive design (works on both desktop and mobile)  
 
-## Learn More
+- **Navigation**  
+  - Clean navbar  
+  - Home page with hero section & search bar  
+  - Footer for credits  
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+GitHub - https://github.com/ArjunLakshakar/schools-portal
